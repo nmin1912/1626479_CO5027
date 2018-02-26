@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master Page.master.cs" Inherits="Prototype.Master_Page" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+<link href="~/css/Styles.css" rel="stylesheet" type="text/css">
+<title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+
+
+</head>
+
+<body runat="server">
+<div id="page">
+<div id="header">
+<h1><asp:ContentPlaceHolder ID="heading1" runat="server"></asp:ContentPlaceHolder></h1>
+    <img src="img/hyundaiLogo.png" alt="Sample Photo" id="logo" />
+
+</div>
+
+  <div id="menu">
+    <ul>
+    <li><a href="~/Default1" runat="server">Home</a></li>
+    <li><a href="~/about" runat="server">About</a></li>
+    <li><a href="~/Contact" runat="server">Contact Us</a></li>
+    <li><a href="~/members/index" runat="server">Members</a></li>
+
+</ul>
+</div>
+
+<div id="content">
+<h2><asp:ContentPlaceHolder ID="heading2" runat="server"></asp:ContentPlaceHolder></h2>
+
+    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+
+</div>
+</div>
+</body>
+</html>
