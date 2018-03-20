@@ -1,17 +1,13 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Master Page.Master" AutoEventWireup="true" CodeBehind="Default1.aspx.cs" Inherits="Prototype.Default1" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Page.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Prototype.admin.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-HYUNDAI 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
-
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
-ONE DOOR STEP AT YOUR WAY 
+    Welcome to Admin Panel
 </asp:Content>
-
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
-    <p>Here you can purchase any vehicle online. We will drive it to your home or you can take it by yourself.</p>
-
-
+    Default page for admin
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" runat="server">
 </asp:Content>

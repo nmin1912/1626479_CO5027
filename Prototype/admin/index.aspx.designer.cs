@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Prototype
+namespace Prototype.admin
 {
 
 
-    public partial class Default1
+    public partial class index
     {
     }
 }

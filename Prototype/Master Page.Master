@@ -6,6 +6,21 @@
 
 <head runat="server">
 <link href="~/css/Styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset ="utf-8" />
+    <style>
+       
+        #map{
+            height: 100%;
+        }
+            html,body{
+                height:100%;
+                margin:0;
+                padding:0;
+
+            }
+    </style>
+
 <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
 
 
@@ -18,16 +33,24 @@
     <img src="img/hyundaiLogo.png" alt="Sample Photo" id="logo" />
 
 </div>
-
+     <div id="login">
+          <ul>
+            <li><a href="~/Login" runat="server"> Login </a></li>
+            <li><a href="~/SignUp" runat="server"> Sign Up </a></li>
+          </ul>
+      </div> 
+     
   <div id="menu">
     <ul>
-    <li><a href="~/Default1" runat="server">Home</a></li>
-    <li><a href="~/about" runat="server">About</a></li>
+    <li><a href="~/Default" runat="server">Home</a></li>
+    <li><a href="~/Products" runat="server">Showroom</a></li>
+    <li><a href="~/About" runat="server">About</a></li>
     <li><a href="~/Contact" runat="server">Contact Us</a></li>
-    <li><a href="~/members/index" runat="server">Members</a></li>
+    </ul>
 
-</ul>
-</div>
+     
+
+  </div>
 
 <div id="content">
 <h2><asp:ContentPlaceHolder ID="heading2" runat="server"></asp:ContentPlaceHolder></h2>
@@ -36,5 +59,7 @@
 
 </div>
 </div>
+
+    <asp:ContentPlaceHolder ID="GoogleMap" runat="server"></asp:ContentPlaceHolder>
 </body>
 </html>

@@ -11,7 +11,7 @@ namespace Prototype
 {
 
 
-    public partial class Default1
+    public partial class Products
     {
     }
 }

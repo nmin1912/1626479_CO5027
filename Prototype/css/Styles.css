@@ -20,11 +20,58 @@ h2{
     height:100px;
 }
 
-#menu {
+/*#menu {
     height: 600px;
     width: 100px;
-    float:right;
+    float:left;
     padding-top: 10px;
+    display:inline-block;
+}
+#menu ul li {
+    list-style-type: none;
+    overflow:auto;
+    
+}
+*/
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F0F0F0;
+}
+
+#menu li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+#menu li a {
+     display:inline-block;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+}
+
+#menu a:hover{
+    color:aqua;
+
+}
+
+#login li{
+    float:right;
+}
+
+#login li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#login a:hover {
+    color: red;
 }
 
 #content{
@@ -38,12 +85,6 @@ a, a:visited{
 	color:black;
 	}
 
-#menu ul li{
-    display:inline-block;
-	list-style-type:none;
-	padding-right:10px;
-	
-}
 
 a:hover{
 	color:white;
