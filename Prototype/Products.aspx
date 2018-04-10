@@ -6,4 +6,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+    <form id="form1" runat="server">
+    </form>
 </asp:Content>

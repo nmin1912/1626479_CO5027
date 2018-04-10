@@ -25,7 +25,7 @@ namespace Prototype
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var manager = new UserManager<IdentityUser>(userStore);
 
-            IdentityRole adminRole = new IdentityRole("Admin");
+            IdentityRole adminRole = new IdentityRole("RegisteredUser");
             roleManager.Create(adminRole);
 
             var user = new IdentityUser()
@@ -37,7 +37,7 @@ namespace Prototype
             IdentityResult result = manager.Create(user, txtPassword.Text);
             if(result.Succeeded)
             {
-                manager.AddToRole(user.Id, "Admin");
+                manager.AddToRole(user.Id, "RegisteredUser");
                 manager.Update(user);
                 //todo: log them in
                 LitRegisterError.Text = "Registration Successful";

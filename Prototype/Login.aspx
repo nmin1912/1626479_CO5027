@@ -16,7 +16,7 @@
         <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+        <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" style="width: 43px" />
         <br />
         <asp:Literal ID="LitLoginError" runat="server"></asp:Literal>
     </form>
