@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Page.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Prototype.admin.index" %>
+﻿<%@ Page Title="Admin Home" Language="C#" MasterPageFile="~/admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Prototype.admin.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Hyundai (Admin)
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
 </asp:Content>
@@ -12,5 +13,4 @@
         <asp:Button ID="btnLogout" runat="server" Text="Log Out" OnClick="btnLogout_Click" />
 &nbsp;</form>
 </asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" runat="server">
-</asp:Content>
+

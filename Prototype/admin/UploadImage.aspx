@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Page.Master" AutoEventWireup="true" CodeBehind="UploadImage.aspx.cs" Inherits="Prototype.admin.UploadImage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="UploadImage.aspx.cs" Inherits="Prototype.admin.UploadImage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
@@ -14,5 +14,4 @@
         <asp:Image ID="CurrentImage" runat="server" Height="200px" Width="400px" />
     </form>
 </asp:Content>
-<asp:Content ID="Content5" ContentPlaceHolderID="GoogleMap" runat="server">
-</asp:Content>
+

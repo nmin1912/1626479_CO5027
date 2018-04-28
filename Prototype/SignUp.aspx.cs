@@ -39,7 +39,6 @@ namespace Prototype
             {
                 manager.AddToRole(user.Id, "RegisteredUser");
                 manager.Update(user);
-                //todo: log them in
                 LitRegisterError.Text = "Registration Successful";
             }
             else

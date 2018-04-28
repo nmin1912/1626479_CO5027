@@ -19,7 +19,7 @@ namespace Prototype
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            var identityDbContext = new IdentityDbContext("IndentityConnetionString");
+            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
             var userStore = new UserStore<IdentityUser>(identityDbContext);
             var userManager = new UserManager<IdentityUser>(userStore);
             var user = userManager.Find(txtEmail.Text, txtPassword.Text);
