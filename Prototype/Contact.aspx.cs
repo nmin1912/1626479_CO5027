@@ -20,7 +20,9 @@ namespace Prototype
             SmtpClient smtpClient = new SmtpClient();
             MailMessage msg = new MailMessage("Sirnmin1996@gmail.com", "Sirnmin1996@gmail.com");
             msg.Subject = txtSubject.Text;
+            msg.Body = txtEmail.Text;
             msg.Body = txtBody.Text;
+            
 
             smtpClient.Host = "smtp.gmail.com";
             smtpClient.Port = 587;
@@ -32,7 +34,11 @@ namespace Prototype
             try
             {
                 smtpClient.Send(msg);
+                txtSubject.Text = String.Empty;
+                txtEmail.Text = String.Empty;
+                txtBody.Text = String.Empty;
                 LitBox.Text = "<p>Success, mail have been sent using SMTP with secure connection and credentials</p>";
+                
             }
             catch(Exception ex)
             {

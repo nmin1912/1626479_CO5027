@@ -1,13 +1,24 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="Prototype.admin.Edit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Page.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="Prototype.Edit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Admin (Edit)
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="heading2" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="MainContent" runat="server">
+   
     <form id="form1" runat="server">
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1">
+         <div id="adminNav">
+          <ul >
+            <li><a><asp:Button ID="btnLogout" runat="server" Text="Log Out" OnClick="btnLogout_Click" BackColor="#F0F0F0" BorderStyle="None" /></a></li>
+            <li><a href="~/List" runat="server">List</a></li>
+            <li><a href="~/add" runat="server">Add</a></li>
+            <li><a href="~/index" runat="server">Home</a></li>
+          </ul>
+       </div> 
+        <h2>EDIT PRODUCTS</h2>
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="ProductID" DataSourceID="SqlDataSource1" Width="520px" Height="224px">
             <EditItemTemplate>
                 ProductID:
                 <asp:Label ID="ProductIDLabel1" runat="server" Text='<%# Eval("ProductID") %>' />
@@ -25,7 +36,10 @@
                 <asp:TextBox ID="ProductDescriptionTextBox" runat="server" Text='<%# Bind("ProductDescription") %>' />
                 <br />
                 ProductImg:
-                <asp:TextBox ID="ProductImgTextBox" runat="server" Text='<%# Bind("ProductImg") %>' />
+                <!--<asp:TextBox ID="ProductImgTextBox" runat="server" Text= />-->
+                <asp:FileUpload ID="UploadFile" runat="server" />
+                <asp:LinkButton ID="linkBtn" runat="server" OnClick="linkBtn_Click">Insert Image</asp:LinkButton>
+                <asp:Label ID="lblUploadImg" runat="server" Text= '<%# Bind("ProductImg") %>'></asp:Label>
                 <br />
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -48,6 +62,10 @@
                 <br />
                 ProductImg:
                 <asp:TextBox ID="ProductImgTextBox" runat="server" Text='<%# Bind("ProductImg") %>' />
+                <asp:FileUpload ID="UploadFile" runat="server" />
+                <asp:LinkButton ID="linkBtn" runat="server" OnClick="linkBtn_Click">Insert Image</asp:LinkButton>
+                <br />
+                <asp:Label ID="lblUploadImg" runat="server"></asp:Label>
                 <br />
                 <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
                 &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -111,7 +129,6 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:Image ID="CurrentImage" runat="server" Height="200px" Width="400px" />
     </form>
 </asp:Content>
 

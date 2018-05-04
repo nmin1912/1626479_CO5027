@@ -163,13 +163,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="admin\add.aspx" />
-    <Content Include="admin\adminImg\hyundaiLogo.png" />
-    <Content Include="admin\Edit.aspx" />
-    <Content Include="admin\index.aspx" />
-    <Content Include="admin\List.aspx" />
-    <Content Include="admin\UploadImage.aspx" />
+    <Content Include="add.aspx" />
+    <Content Include="Edit.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="List.aspx" />
+    <Content Include="CompletePurchase.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -188,11 +187,11 @@
     <Content Include="img\hyundaiLogo.png" />
     <Content Include="Login.aspx" />
     <Content Include="Master Page.Master" />
-    <Content Include="admin\Web.config">
+    <Content Include="Web1.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="admin\AdminMaster.Master" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Products.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -233,57 +232,50 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin\add.aspx.cs">
+    <Compile Include="add.aspx.cs">
       <DependentUpon>add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\add.aspx.designer.cs">
+    <Compile Include="add.aspx.designer.cs">
       <DependentUpon>add.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\Edit.aspx.cs">
+    <Compile Include="Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\Edit.aspx.designer.cs">
+    <Compile Include="Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\index.aspx.cs">
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\index.aspx.designer.cs">
+    <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\List.aspx.cs">
+    <Compile Include="List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\List.aspx.designer.cs">
+    <Compile Include="List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\AdminMaster.Master.cs">
-      <DependentUpon>AdminMaster.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\AdminMaster.Master.designer.cs">
-      <DependentUpon>AdminMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="admin\UploadImage.aspx.cs">
-      <DependentUpon>UploadImage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\UploadImage.aspx.designer.cs">
-      <DependentUpon>UploadImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CompletePurchase.aspx.cs">
+      <DependentUpon>CompletePurchase.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="CompletePurchase.aspx.designer.cs">
+      <DependentUpon>CompletePurchase.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -315,6 +307,7 @@
     <Compile Include="Master Page.Master.designer.cs">
       <DependentUpon>Master Page.Master</DependentUpon>
     </Compile>
+    <Compile Include="PaymentsExeception.cs" />
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

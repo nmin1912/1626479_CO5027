@@ -1,5 +1,4 @@
-﻿*{border:0;
-padding:0; margin:0; }
+﻿
 
 a {
     font-family: Gadugi;
@@ -12,41 +11,34 @@ html, body {
 }
 body {
     background-color: #FFFFFF;
+    min-height:100%;
 }
 
 h2 {
     font-family: Gadugi;
     color: black;
     font-size: 24px;
-    padding-top: 20px;
-    
-   
 }
 
 #page {
     width: 1000px;
     margin: auto;
-    padding-bottom:100px;
     background-color: #FFFFFF;
 }
 
-#content {
-    margin-left: 10px;
-}
-
-footer{
-    text-align:center;
-    float:right;
-}
-/*The style below will apply to the element with an
-id of "header" */
-/*
-#header {
+footer {
+    position:fixed;
+    bottom: 0;
     width: 100%;
-    height: 100px;
-    background-color: #FFFFFF;
+    height: auto;
+    background-color: #F0F0F0;
+    text-align:right;
+  
 }
-*/
+
+#foot {
+    margin: 50px
+}
 
 /* Logo image Setting - Start*/
 #logo {
@@ -56,16 +48,7 @@ id of "header" */
 }
 /* Logo image Setting - End*/
 
-/* Map Setting - Start*/
-#map {
-    height: 50%;
-    width:1000px;
-    margin:auto;
-    margin-bottom:50px;
-}
-/* Map Setting - End*/
-
-/* Navigation Bar Setting - Start */
+/* User Navigation Bar Setting - Start */
 #menu ul {
     list-style-type: none;
     margin: 0;
@@ -92,7 +75,37 @@ id of "header" */
     font-size:16px;
     background-color:white;
 }
-/* Navigation Bar Setting - End */
+/* User Navigation Bar Setting - End */
+
+/* Admin Navigation Bar Setting - Start */
+#adminNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #F0F0F0;
+}
+
+#adminNav li {
+    float: right;
+    border-left: 1px solid #bbb;
+
+}
+
+#adminNav li a {
+       display: inline-block;
+       color: black;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+       background-color: #F0F0F0;
+  }
+
+#adminNav a:hover {
+    color: #003082;
+    font-weight: 600;
+}
+/* Admin Navigation Bar Setting - End */
 
 /* Login Bar Setting - Start */
 
@@ -123,7 +136,81 @@ id of "header" */
 
 /* Login Bar Setting - End */
 
+/* Default Page Style*/
+#frmDefault {
+    width: 1000px;
+    height: auto;
+    padding: 5px 20px 20px 20px;
+    text-align:center;
+    vertical-align:central;
+    
+}
 
-.inputs {
+#tblRep{
+    width:45%;
+    margin:10px 20px 10px 20px;
+    float:left;
+    border-collapse:collapse;
+
+}
+ #tblRep td {
+      border-width: 2px;
+      border-style: double;
+      border-color: #F0F0F0;
+      padding: 10px 10px 10px 10px;
+      
+}
+ #tblRep p{
+     margin:5px;
+ }
+
+/* Contact Us Page Style*/
+
+#frmContact{
+    margin-left:20px;
+}
+#lblStore{
+    text-align:center;
+
+}
+/* Map Setting - Start*/
+#map {
+    height: 50%;
+    width: 1000px;
+    margin: auto;
+    margin-bottom: 100px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #F0F0F0;
+}
+/* Map Setting - End*/
+
+/*Login Page Style */
+#frmLogin {
+    width: 1000px;
+    height: auto;
+
+}
+
+.column {
+    float: right;
+    width: 55%;
+    padding: 30px;
+    padding-left:80px;
+    text-align:center;
+    height: 100%;
+    border-left: 3px solid #F0F0F0;
+  
+}
+.column2 {
+    float: left;
+    width: 25%;
+    padding: 30px;
+    height: 100%;
     background-color: #F0F0F0;
+}
+
+#FormView1{
+    font-family:Gadugi;
+
 }

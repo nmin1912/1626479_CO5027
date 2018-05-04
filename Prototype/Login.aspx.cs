@@ -49,11 +49,49 @@ namespace Prototype
 
                 if(userRoles.Equals("Admin"))
                 {
-                    Response.Redirect("~/admin/index.aspx");
+                    Response.Redirect("~/index.aspx");
+                    
+                }
+                else if(userRoles.Equals("RegisteredUser"))
+                {
+                    Response.Redirect("~/Default.aspx");
                 }
             }
 
         }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            var identityDbContext = new IdentityDbContext("IdentityConnectionString");
+            var roleStore = new RoleStore<IdentityRole>(identityDbContext);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+            var userStore = new UserStore<IdentityUser>(identityDbContext);
+            var manager = new UserManager<IdentityUser>(userStore);
+
+            IdentityRole adminRole = new IdentityRole("RegisteredUser");
+            roleManager.Create(adminRole);
+
+            var user = new IdentityUser()
+            {
+                UserName = txtUsername.Text,
+                Email = txtUsername.Text
+            };
+
+            IdentityResult result = manager.Create(user, txtRegPassword.Text);
+            if (result.Succeeded)
+            {
+                manager.AddToRole(user.Id, "RegisteredUser");
+                manager.Update(user);
+                LitRegisterError.Text = "Registration is Successful";
+                Response.Redirect("~/Default.aspx");
+            }
+            else
+            {
+                LitRegisterError.Text = "An error has occured: " + result.Errors.FirstOrDefault();
+            }
+        }
+
+       
     }
 
 }

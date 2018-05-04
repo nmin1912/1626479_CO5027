@@ -7,45 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Prototype.admin {
+namespace Prototype {
     
     
-    public partial class UploadImage {
+    public partial class CompletePurchase {
         
         /// <summary>
-        /// form1 control.
+        /// frm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm frm;
         
         /// <summary>
-        /// imageFileUploadControl control.
+        /// btnConfirmPurchase control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload imageFileUploadControl;
+        protected global::System.Web.UI.WebControls.Button btnConfirmPurchase;
         
         /// <summary>
-        /// btnUpload control.
+        /// LitInformation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpload;
-        
-        /// <summary>
-        /// CurrentImage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image CurrentImage;
+        protected global::System.Web.UI.WebControls.Literal LitInformation;
     }
 }

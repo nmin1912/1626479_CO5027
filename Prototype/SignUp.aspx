@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master Page.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Prototype.SignUp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
+    Sign Up
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="heading1" runat="server">
 </asp:Content>
