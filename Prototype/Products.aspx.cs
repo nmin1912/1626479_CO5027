@@ -44,8 +44,8 @@ namespace Prototype
             productItem.name = "Hyundai";
             productItem.currency = "SGD";
             productItem.price = productPrice.ToString();
-            productItem.sku = "Test";
-            productItem.quantity = quantityOfProduct.ToString();
+            productItem.sku = "Cars";
+            productItem.quantity = ddlQuantity.SelectedValue.ToString();
 
             var transactionDetails = new Details();
             transactionDetails.tax = "0";
