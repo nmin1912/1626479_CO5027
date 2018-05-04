@@ -21,7 +21,7 @@ Home
                         <td>
                             <a href="<%# Eval("ProductId","Products.aspx?Id={0}") %>">
                             <p><asp:Image ID="imgDisplay" Height="290px" Width="380px" runat="server" ImageUrl='<%# Eval ("ProductImg") %>' /></p>
-                                <%# Eval("ProductName") %>
+                                <h3><%# Eval("ProductName") %></h3>
                                 <p>Price: $ <%# Eval("ProductPrice") %></p>
                             </a>
                         </td>

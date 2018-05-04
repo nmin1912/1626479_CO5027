@@ -79,11 +79,13 @@
             </SelectParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:DropDownList ID="ddlQuantity" runat="server" Font-Names="Gadugi" Font-Size="12px">
-            <asp:ListItem Selected="True">1</asp:ListItem>
+        <asp:DropDownList ID="ddlQuantity" runat="server" Font-Names="Gadugi" Font-Size="12px" OnSelectedIndexChanged="ddlQuantity_SelectedIndexChanged" DataTextField="ProductInStock" DataValueField="ProductID" Height="18px" Width="48px" >
+            <asp:ListItem Selected="True" >1</asp:ListItem>
+            <asp:ListItem Selected="True" >2</asp:ListItem>
+            <asp:ListItem Selected="True" >3</asp:ListItem>
         </asp:DropDownList>
-        <br />
-        <br />
         <asp:Button ID="btnPurchase" runat="server" Text="Buy" OnClick="btnPurchase_Click" BackColor="#F0F0F0" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Font-Names="Gadugi" Height="30px" Width="50px" />
+        <br />
+        <br />
     </form>
 </asp:Content>

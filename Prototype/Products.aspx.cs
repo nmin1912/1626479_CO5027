@@ -93,5 +93,10 @@ namespace Prototype
 
 
         }
+
+        protected void ddlQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            /*ddlQuantity.Text = "<%# Bind("ProductInStock") %>";*/
+        }
     }
 }
